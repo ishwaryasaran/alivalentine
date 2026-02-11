@@ -1,0 +1,128 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Will You Be My Valentine?</title>
+
+<style>
+body {
+    background: black;
+    color: #ff69b4;
+    font-family: "Courier New", monospace;
+    text-align: center;
+    padding: 20px;
+    overflow-x: hidden;
+}
+
+h1 {
+    font-size: 40px;
+    text-shadow: 0 0 10px #ff1493;
+}
+
+.container {
+    margin-top: 30px;
+}
+
+img {
+    width: 200px;
+    height: 200px;
+    margin: 20px;
+    border: 4px solid hotpink;
+    cursor: pointer;
+    transition: transform 0.2s;
+}
+
+img:hover {
+    transform: scale(1.1);
+}
+
+.hidden {
+    display: none;
+}
+
+button {
+    background-color: hotpink;
+    color: black;
+    border: none;
+    padding: 10px 20px;
+    font-size: 20px;
+    cursor: pointer;
+    margin: 15px;
+}
+
+button:hover {
+    background-color: #ff1493;
+}
+
+.cute-text {
+    margin-top: 30px;
+    font-size: 22px;
+    color: white;
+    animation: glow 1.5s infinite alternate;
+}
+
+@keyframes glow {
+    from { text-shadow: 0 0 5px #ff69b4; }
+    to { text-shadow: 0 0 20px #ff1493; }
+}
+
+.moon-saturn {
+    font-size: 26px;
+    margin-top: 20px;
+    color: #ffd700;
+}
+</style>
+</head>
+
+<body>
+
+<h1>💖 Welcome to My Retro Love Page 💖</h1>
+
+<p>Choose the correct photo to unlock something special...</p>
+
+<div class="container">
+    <img src="https://via.placeholder.com/200?text=Left+Choice" onclick="wrongChoice()">
+    <img src="https://via.placeholder.com/200?text=Right+Choice" onclick="rightChoice()">
+</div>
+
+<div id="valentineQuestion" class="hidden">
+    <h2>🌹 Will You Be My Valentine? 🌹</h2>
+    <button onclick="sayYes()">YES 💕</button>
+    <button onclick="sayNo()">NO 😏</button>
+</div>
+
+<div id="cuteMessage" class="hidden cute-text">
+    You just made my heart do a happy dance 💃💖<br>
+    I promise unlimited hugs, forehead kisses, and annoying you forever 🥰<br><br>
+    
+    <div class="moon-saturn">
+        🌙 Love you to the Moon and Saturn 🪐
+    </div>
+
+    <br>
+    Happy Valentine’s Day, my love 🌹✨
+</div>
+
+<script>
+function wrongChoice() {
+    alert("Oops! That selection is wrong... but I’ll still let you proceed because I love you ❤️");
+    document.getElementById("valentineQuestion").classList.remove("hidden");
+}
+
+function rightChoice() {
+    alert("Yessss! You selected the right one 😍");
+    document.getElementById("valentineQuestion").classList.remove("hidden");
+}
+
+function sayYes() {
+    document.getElementById("cuteMessage").classList.remove("hidden");
+}
+
+function sayNo() {
+    alert("Wrong option but try again 😤💖");
+}
+</script>
+
+</body>
+</html>
